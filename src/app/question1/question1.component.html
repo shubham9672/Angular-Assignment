@@ -1,0 +1,17 @@
+<div>
+    <div class="container">
+        <h1 class="m-2">Question 1</h1>
+        <div class="column1" *ngFor="let i of posts">
+        <div class="card" id="design">
+        <div class="card-body" >
+            <h1 class="card-title" id="centers" >{{i["title"]}}</h1>
+            <p class="card-text">{{i["body"] | slice: 0:350}}...... <a><span style="color: blue;"> read more</span></a></p>
+        </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center up standard-shadow">
+        <div class="btn btn-outline-primary m-1" (click)="decrement()"> &#8249;</div>
+        <p class="m-1 p-2 text-primary">{{postStart}}-{{postEnd}}/{{totalpost}}</p>
+        <div class="btn btn-outline-primary m-1" (click)="increment()">&#8250; </div>
+    </div>
+</div>

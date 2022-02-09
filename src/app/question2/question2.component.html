@@ -1,0 +1,42 @@
+<div>
+    <div>
+        <h1>Question 2</h1>
+        <div class="m-2">
+            <form class="width-five p-5" [formGroup]="employeeInfo">
+                <label>Employee Name</label>
+                <input class='form-control' formControlName="employeeName">
+                <div class="row">
+                    <div class="col">
+                        <label>Email</label>
+                        <input class='form-control' formControlName="employeeEmail">
+                    </div>
+                    <div class="col">
+                        <label>Phone Number</label>
+                        <input class='form-control'  formControlName="employeePhone">
+                    </div>
+                </div>
+                <label>Date of Birth</label>
+                <input class='form-control' type="date" formControlName="employeeDOB">
+                <label>Employee Address</label>
+                <textarea class='form-control p-1' formControlName="employeeAdd"></textarea>
+                <br />
+                <div class="d-flex justify-content-center">
+                    <div class="btn btn-success" (click)="submitHandler()">Submit</div>
+                </div>
+                <p *ngIf="flagText">Name: {{employeeInfo.value["employeeName"]}}
+                    <br/>
+                    Email: {{employeeInfo.value["employeeEmail"]}}
+                    <br />
+                   Phone Number : {{employeeInfo.value["employeePhone"]}}
+                    <br />
+                    DOB : {{employeeInfo.value["employeeDOB"]}}
+                    <br />
+                    Employee Address: {{employeeInfo.value["employeeAdd"]}}
+                    <br/>
+                    <br/>
+                    Check Console Also.
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
